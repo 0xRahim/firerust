@@ -1,0 +1,60 @@
+# =========================
+# Global
+# =========================
+.DS_Store
+Thumbs.db
+
+# Env files (keep example files if any)
+.env
+.env.local
+.env.*.local
+
+# =========================
+# Rust API (firerust-api)
+# =========================
+/firerust-api/target/
+
+# Backup / temp files
+**/*.rs.bk
+
+# Cargo.lock:
+# KEEP this if it's an application (recommended)
+# Uncomment below ONLY if this is a library
+# /firerust-api/Cargo.lock
+
+# =========================
+# Next.js Client (firerust-client)
+# =========================
+
+# Dependencies
+/firerust-client/node_modules/
+
+# Next.js build output
+/firerust-client/.next/
+/firerust-client/out/
+/firerust-client/build/
+
+# Logs
+/firerust-client/npm-debug.log*
+/firerust-client/yarn-debug.log*
+/firerust-client/yarn-error.log*
+/firerust-client/pnpm-debug.log*
+
+# Vercel
+/firerust-client/.vercel
+
+# TypeScript
+/firerust-client/*.tsbuildinfo
+
+# =========================
+# Editor / IDE
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# Optional (uncomment if needed)
+# =========================
+
+# Ignore config secrets (ONLY if sensitive)
+# /firerust-api/config.json

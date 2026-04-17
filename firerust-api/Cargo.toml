@@ -1,0 +1,37 @@
+[package]
+name = "firerust"
+version = "0.1.0"
+edition = "2021"
+description = "A lightweight Firebase/Supabase-style backend for small projects"
+
+[[bin]]
+name = "firerust"
+path = "src/main.rs"
+
+[lib]
+name = "firerust"
+path = "src/lib.rs"
+
+[dependencies]
+axum           = { version = "0.7.9",  features = ["multipart"] }
+tokio          = { version = "1.38",   features = ["full"] }
+sqlx           = { version = "0.7.4",  features = ["sqlite", "runtime-tokio-rustls", "macros"] }
+serde          = { version = "1",      features = ["derive"] }
+serde_json     = "1"
+jsonwebtoken   = "8.3"
+bcrypt         = "0.15"
+uuid           = { version = "1.8",    features = ["v4"] }
+chrono         = { version = "0.4.38", features = ["serde"] }
+tower-http     = { version = "0.5.2",  features = ["cors", "trace"] }
+tower          = "0.4"
+tracing        = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+thiserror      = "1"
+tokio-util     = { version = "0.7",    features = ["io"] }
+anyhow         = "1"
+getrandom      = "=0.2.15"
+
+[dev-dependencies]
+tokio          = { version = "1.38", features = ["full"] }
+tower          = { version = "0.4",  features = ["util"] }
+tempfile       = "3"
