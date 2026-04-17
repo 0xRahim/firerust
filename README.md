@@ -25,9 +25,11 @@ Built with **Rust + Axum + SQLite**. Zero external services required.
 
 ## Quick Start
 
+### Run the backend API
+
 ```bash
 # 1. Clone / enter the directory
-cd firerust
+cd firerust-api
 
 # 2. Edit config (at minimum change the keys)
 cp config.json config.local.json
@@ -37,8 +39,14 @@ $EDITOR config.local.json
 cargo run --release -- config.local.json
 ```
 
-The server starts on `http://0.0.0.0:3000` by default.
+The server starts on `http://0.0.0.0:4000` by default.
 
+### Run the web client
+
+```bash
+cd firerust-client
+npx run dev
+```
 ---
 
 ## Configuration — `config.json`
@@ -51,7 +59,7 @@ The server starts on `http://0.0.0.0:3000` by default.
   "uploads_folder":  "./uploads",
   "jwt_expiry_hours": 24,
   "host":            "0.0.0.0",
-  "port":            3000
+  "port":            4000
 }
 ```
 
