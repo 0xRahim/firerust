@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-serif), Georgia, serif;
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+}
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  :root {
+    --fr-bg: #faf7f4;
+    --fr-surface: #ffffff;
+    --fr-border: #e8e2da;
+    --fr-muted: #a8a29e;
+    --fr-text: #1c1917;
+    --fr-text-secondary: #78716c;
+    --fr-accent: #c96a2a;
+    --fr-accent-hover: #b85e24;
+    --fr-sidebar: #1c1917;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #d6cec7; border-radius: 99px; }
+  ::-webkit-scrollbar-thumb:hover { background: #b8afa7; }
+
+  /* Selection */
+  ::selection { background: #f0d9c8; color: #1c1917; }
+}
+
+@layer utilities {
+  .animate-in {
+    animation: fadeSlideIn 0.2s ease-out;
+  }
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(-6px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
