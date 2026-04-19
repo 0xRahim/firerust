@@ -25,6 +25,11 @@ Built with **Rust + Axum + SQLite**. Zero external services required.
 
 ## Quick Start
 
+### Download the linux binary from releases and run
+```bash
+./firerust
+```
+
 ### Run the backend API
 
 ```bash
